@@ -1,0 +1,63 @@
+# UUID of the dataset
+id: 94cf3426-6200-44c8-b1b2-f4e37e850791
+$schema: 'https://schemas.opendatacube.org/dataset'
+
+# Product name
+product: 
+  name: c_o3_no_z
+
+# Native CRS
+crs: epsg:32632
+
+# Optional GeoJSON object in the units of native CRS.
+# Define a Polygon such that all valid pixels across all bands 
+# are inside the polygon
+geometry: 
+  type: Polygon
+  coordinates: [[[697000.0, 5175000.0], [697000.0, 4943000.0], [457000.0, 4943000.0], [457000.0, 5175000.0], [697000.0, 5175000.0]]]
+# coordinates: [[[14.99, 46.99], [14.99, 42.0], [5.0, 42.0], [5.0, 46.99], [14.99, 46.99]]]
+
+grids:
+  default:
+    shape: [59, 61]
+    # transform: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0]
+    # transform: [457000.0, 4000.0, 0.0, 4943000.0, 0.0, 4000.0, 0.0, 0.0, 1.0]
+    # transform: [4000.0, 1000.0, 455000.0, 1000.0, -4000.0, 5177000.0, 0.0, 0.0, 1.0]
+    transform: [4000.0, 0.0, 455000.0, 0.0, -4000.0, 5177000.0, 0.0, 0.0, 1.0]
+    # transform: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0]
+    #spatial_reference: GEOGCS["GCS_WGS_1984",DATUM["WGS_1984",SPHEROID["WGS_84",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
+    spatial_reference: PROJCS["WGS 84 / UTM zone 32N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",9],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],AUTHORITY["EPSG","32632"],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+
+# measurements:
+#   "c_o3":
+#     layer: c_O3
+#     path: ./test_no_zeta.nc#part=0
+#     path: ./test_no_zeta.nc#part=1
+#     path: ./test_no_zeta.nc#part=2
+#     path: ./test_no_zeta.nc#part=23
+
+measurements:
+#  "c_o3":
+#    layer: c_O3
+   "o30":
+     layer: c_O3
+     path: ./test_no_zeta.nc#part=0
+   "o31":
+     layer: c_O3
+     path: ./test_no_zeta.nc#part=1
+      dtype: float64
+   "o323":
+     layer: c_O3
+     path: ./test_no_zeta.nc#part=23
+
+properties:
+  #datetime: 2015-04-10 15:54:01+00:00
+  dtr:start_datetime: 2015-04-10T02:00:00.000Z
+  dtr:end_datetime: 2015-04-11T01:00:00.000Z
+  eo:instrument: WAISALA
+  eo:platform: arpa
+  odc:file_format: NetCDF
+  odc:processing_datetime: 2022-05-12T18:02:03.926659
+
+lineage: {}
+

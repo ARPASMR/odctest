@@ -1,0 +1,50 @@
+---
+name: c_o3_no_z
+description: ARPA Ozone cover.
+metadata_type: eo3
+
+metadata:
+  product:
+    name: c_o3_no_z
+
+load:
+  crs: EPSG:32632
+  resolution:
+    x: 4000.0
+    y: 4000.0
+  align:
+    x: 3000.0
+    y: 1000.0
+
+storage:
+  crs: EPSG:32632
+  resolution:
+    x: 4000.0
+    y: 4000.0
+
+measurements:
+  - name: "c_o3"
+    aliases: [c_O3]
+    dtype: float64
+    nodata: -9999
+    units: ppb
+
+# measurements:
+#  "c_o3":
+#    layer: c_O3
+#    "O30":
+#      aliases: [c_O3]
+#      dtype: float64
+#      nodata: -9999
+#      units: ppb
+#    "O31":
+#      aliases: [c_O3]
+#      dtype: float64
+#      nodata: -9999
+#      units: ppb
+#    "O323":
+#      aliases: [c_O3]
+#      dtype: float64
+#      nodata: -9999
+#      units: ppb
+

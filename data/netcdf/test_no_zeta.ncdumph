@@ -1,0 +1,28 @@
+netcdf test_no_zeta {
+dimensions:
+	time = UNLIMITED ; // (24 currently)
+	x = 61 ;
+	y = 59 ;
+variables:
+	double time(time) ;
+		time:units = "hours since 1-1-1 00:00:0.0" ;
+		time:delta_t = "0000-00-00 01:00:00.00 +00:00" ;
+	double x(x) ;
+		x:units = "km" ;
+	double y(y) ;
+		y:units = "km" ;
+	float c_O3(time, y, x) ;
+		c_O3:units = "ppb" ;
+		c_O3:_FillValue = -9.96921e+36f ;
+		c_O3:add_offset = 0.f ;
+		c_O3:scale_factor = 1.f ;
+		c_O3:actual_range = 6.292308e-06f, 93.20821f ;
+
+// global attributes:
+		:Conventions = "COARDS" ;
+		:lib_ver = 20000 ;
+		:creation_time = "11  4 2015  H 11.09.06.997 (system local time)" ;
+		:description = "" ;
+		:model = "FARM" ;
+		:history = "Converted from /dati/CHAIN/tmp/icbc/chimere.0_AERO3.nc using GAP" ;
+}

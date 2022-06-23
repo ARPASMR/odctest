@@ -1,0 +1,6 @@
+I nomi sono piuttosto autoesplicativi.
+
+I livelli z sono i seguenti: 10, 30, 60, 100, 140, 200, 300, 500, 800, 1250, 1950, 3050, 4860
+
+La variabile contenuta nel file è c_O3, di tipo float. Ho mantenuto la dipendenza di c_O3 da z anche nel file senza i livelli z.
+

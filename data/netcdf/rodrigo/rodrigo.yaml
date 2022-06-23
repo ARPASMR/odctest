@@ -1,0 +1,64 @@
+id: 50000000-0000-0000-0000-202205051041
+$schema: https://schemas.opendatacube.org/dataset
+    
+product:
+  name: sentinel_5p_NO2
+  href: https://s5phub.copernicus.eu/dhus/#/home
+  format: NetCDF
+
+crs: epsg:4326
+
+geometry:
+  type: Polygon
+  coordinates: [[[14.99, 46.99], [14.99, 42.0], [5.0, 42.0], [5.0, 46.99], [14.99, 46.99]]]
+ 
+grids:
+  default:
+    shape: [499,999]
+    transform: [5.0,0.01,0.0,46.99,0.0,-0.010000000000000007,0,0,1]
+    spatial_reference: GEOGCS["GCS_WGS_1984",DATUM["WGS_1984",SPHEROID["WGS_84",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
+
+measurements:
+  "tropospheric_NO2_column_number_density":
+    layer: tropospheric_NO2_column_number_density
+    path: /home/buck/dev/odc/data/netcdf/rodrigo/rodrigo.nc#part=0
+    nodata: -9999
+    grid: default
+  
+  "NO2_column_number_density":
+    layer: tropospheric_NO2_column_number_density
+    path: /home/buck/dev/odc/data/netcdf/rodrigo/rodrigo.nc#part=1
+    nodata: -9999
+    grid: default
+  "stratospheric_NO2_column_number_density":
+    layer: tropospheric_NO2_column_number_density
+    path: /home/buck/dev/odc/data/netcdf/rodrigo/rodrigo.nc#part=2
+    nodata: -9999
+    grid: default
+  "NO2_slant_column_number_density":
+    layer: tropospheric_NO2_column_number_density
+    path: /home/buck/dev/odc/data/netcdf/rodrigo/rodrigo.nc#part=3
+    nodata: -9999
+    grid: default
+  "cloud_fraction":
+    layer: tropospheric_NO2_column_number_density
+    path: /home/buck/dev/odc/data/netcdf/rodrigo/rodrigo.nc#part=4
+    nodata: -9999
+    grid: default
+  "absorbing_aerosol_index":
+    layer: tropospheric_NO2_column_number_density
+    path: /home/buck/dev/odc/data/netcdf/rodrigo/rodrigo.nc#part=5
+    nodata: -9999
+    grid: default
+  "tropopause_pressure":
+    layer: tropospheric_NO2_column_number_density
+    path: /home/buck/dev/odc/data/netcdf/rodrigo/rodrigo.nc#part=6
+    nodata: -9999
+    grid: default
+    
+properties:
+  odc:file_format: NetCDF
+  datetime: 20220505T10:41:00
+
+lineage: {}
+

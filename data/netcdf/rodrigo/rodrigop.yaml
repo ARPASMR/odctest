@@ -1,0 +1,57 @@
+name: sentinel_5p_NO2
+description: NO2 cover.
+metadata_type: eo3
+
+metadata:
+  product:
+    name: sentinel_5p_NO2
+
+load:
+  crs: EPSG:4326
+  resolution:
+    lon: 0.01
+    lat: 0.01
+
+storage:
+  crs: EPSG:4326
+  resolution:
+    lon: 0.01
+    lat: 0.01
+
+measurements:
+  - name: "tropospheric_NO2_column_number_density"
+    aliases: [tropospheric_NO2_column_number_density]
+    dtype: float64
+    nodata: -9999
+    units: "mol/m^2"
+  - name: "NO2_column_number_density"
+    aliases: [NO2_column_number_density]
+    dtype: float64
+    nodata: -9999
+    units: "mol/m^2"
+  - name: "stratospheric_NO2_column_number_density"
+    aliases: [stratospheric_NO2_column_number_density]
+    dtype: float64
+    nodata: -9999
+    units: "mol/m^2"
+  - name: "NO2_slant_column_number_density"
+    aliases: [NO2_slant_column_number_density]
+    dtype: float64
+    nodata: -9999
+    units: "mol/m^2"
+  - name: "cloud_fraction"
+    aliases: [cloud_fraction]
+    dtype: float64
+    nodata: -9999
+    units: ""
+  - name: "absorbing_aerosol_index"
+    aliases: [absorbing_aerosol_index]
+    dtype: float64
+    nodata: -9999
+    units: ""
+  - name: "tropopause_pressure"
+    aliases: [tropopause_pressure]
+    dtype: float64
+    nodata: -9999
+    units: "Pa"
+
